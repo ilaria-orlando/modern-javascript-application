@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Check the weather!</title>
+        <link href="style.css" rel="stylesheet">
+    </head>
+    <body>
+        <div class="themebutton">
+            <button type="button" id="theme">Change Theme</button>
+        </div>
+        <div class="card">
+            <div id="weatherApp">
+                <div class="top_aligner">
+                    <form method="POST">
+                        <label for="city">Please specify your city</label><br>
+                        <input type="text" id="city" name="city">
+                        <button type="button" id="run">Go!</button>
+                    </form>
+                    <p id="error"></p>
+                </div>
+                <div class="currentweather">
+                    <img src="#" alt="weather" height="100px" width="100px" id="img">
+                    <div class="weathervalues">
+                        <span id="temp"></span>
+                        <div class="flex">
+                            <span id="weather"></span><br>
+                            <span id="wind"></span>
+                        </div>
+                    </div>
+                </div>
+                <div class="chartcontainer">
+                    <canvas id="chart" width="310px" height="150px"></canvas>
+                </div>
+
+                <div class="bottom_aligner">
+                    <table id="table">
+                        <tr id = "weekday"></tr>
+                        <tr id="5daysTemp"></tr>
+                        <tr id="5daysWeather"></tr>
+                    </table>
+                </div>
+            </div>
+        </div>
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.bundle.min.js"></script>
+        <script src="./script.js"></script>
+    </body>
+</html>
